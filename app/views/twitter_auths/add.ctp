@@ -1,3 +1,5 @@
+<a href="#" id="auth_twitter_button">Authorize Twitter</a>
+<!--
 <div class="twitterAuths form">
 <?php echo $this->Form->create('TwitterAuth');?>
 	<fieldset>
@@ -20,3 +22,4 @@
 		<li><?php echo $this->Html->link(__('New Client Service', true), array('controller' => 'client_services', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+-->
