@@ -1,0 +1,184 @@
+2012-02-13 10:33:15 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/cake/libs/debugger.php:686) in [/var/www/html/cake/libs/controller/controller.php, line 742]
+2012-02-13 16:13:52 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 5
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-13 16:13:52 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/cake/libs/debugger.php:686) in [/var/www/html/cake/libs/controller/controller.php, line 742]
+2012-02-15 11:08:03 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 2
+            [username] => noah
+            [group_id] => 1
+            [created] => 2012-02-13 16:14:38
+            [modified] => 2012-02-13 16:14:38
+        )
+
+)
+
+Aco: controllers/Users/build_acl in [/var/www/html/cake/libs/controller/components/acl.php, line 273]
+2012-02-15 11:08:53 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 2
+            [username] => noah
+            [group_id] => 1
+            [created] => 2012-02-13 16:14:38
+            [modified] => 2012-02-13 16:14:38
+        )
+
+)
+
+Aco: controllers/Users/initDB in [/var/www/html/cake/libs/controller/components/acl.php, line 273]
+2012-02-15 11:16:27 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 2
+            [username] => noah
+            [group_id] => 1
+            [created] => 2012-02-13 16:14:38
+            [modified] => 2012-02-13 16:14:38
+        )
+
+)
+
+Aco: controllers/Users/build_acl in [/var/www/html/cake/libs/controller/components/acl.php, line 273]
+2012-02-15 11:41:03 Warning: Warning (512): DbAcl::allow() - Invalid node in [/var/www/html/cake/libs/controller/components/acl.php, line 361]
+2012-02-15 11:49:16 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 1
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 11:49:16 Warning: Warning (512): DbAcl::allow() - Invalid node in [/var/www/html/cake/libs/controller/components/acl.php, line 361]
+2012-02-15 11:49:16 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 2
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 11:49:16 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 3
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 11:50:13 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 1
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 11:50:13 Warning: Warning (512): DbAcl::allow() - Invalid node in [/var/www/html/cake/libs/controller/components/acl.php, line 361]
+2012-02-15 11:50:13 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 2
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 11:50:13 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 3
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 12:26:04 Warning: Warning (512): DbAcl::allow() - Invalid node in [/var/www/html/cake/libs/controller/components/acl.php, line 361]
+2012-02-15 12:29:40 Warning: Warning (512): DbAcl::allow() - Invalid node in [/var/www/html/cake/libs/controller/components/acl.php, line 361]
+2012-02-15 12:29:42 Warning: Warning (512): DbAcl::allow() - Invalid node in [/var/www/html/cake/libs/controller/components/acl.php, line 361]
+2012-02-15 13:05:29 Warning: Warning (512): Callback parentNode() not defined in User in [/var/www/html/cake/libs/model/behaviors/acl.php, line 64]
+2012-02-15 13:10:10 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 1
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 13:10:10 Warning: Warning (512): DbAcl::allow() - Invalid node in [/var/www/html/cake/libs/controller/components/acl.php, line 361]
+2012-02-15 13:10:10 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 2
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 13:10:10 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 3
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 13:28:35 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => User
+    [Aro0.foreign_key] => 1
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 13:28:35 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/cake/libs/debugger.php:686) in [/var/www/html/cake/libs/controller/controller.php, line 742]
+2012-02-15 13:29:13 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => User
+    [Aro0.foreign_key] => 3
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 13:29:13 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/cake/libs/debugger.php:686) in [/var/www/html/cake/libs/controller/controller.php, line 742]
+2012-02-15 13:29:20 Warning: Warning (512): AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => User
+    [Aro0.foreign_key] => 2
+)
+" in [/var/www/html/cake/libs/model/db_acl.php, line 191]
+2012-02-15 13:29:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/cake/libs/debugger.php:686) in [/var/www/html/cake/libs/controller/controller.php, line 742]
+2012-02-15 13:30:31 Warning: Warning (512): Callback parentNode() not defined in User in [/var/www/html/cake/libs/model/behaviors/acl.php, line 64]
+2012-02-15 13:30:32 Warning: Warning (512): Callback parentNode() not defined in User in [/var/www/html/cake/libs/model/behaviors/acl.php, line 64]
+2012-02-15 13:30:32 Warning: Warning (512): Callback parentNode() not defined in User in [/var/www/html/cake/libs/model/behaviors/acl.php, line 64]
+2012-02-15 21:50:58 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [username] => noah
+            [group_id] => 1
+            [created] => 2012-02-15 13:39:44
+            [modified] => 2012-02-15 13:39:44
+        )
+
+)
+
+Aco: controllers/FacebookAuths/request in [/var/www/html/cake/libs/controller/components/acl.php, line 273]
+2012-02-15 21:53:54 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [username] => noah
+            [group_id] => 1
+            [created] => 2012-02-15 13:39:44
+            [modified] => 2012-02-15 13:39:44
+        )
+
+)
+
+Aco: controllers/Users/build_acl in [/var/www/html/cake/libs/controller/components/acl.php, line 273]
+2012-02-15 22:30:11 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [username] => noah
+            [group_id] => 1
+            [created] => 2012-02-15 13:39:44
+            [modified] => 2012-02-15 13:39:44
+        )
+
+)
+
+Aco: controllers/FacebookAuths/auth_return in [/var/www/html/cake/libs/controller/components/acl.php, line 273]
