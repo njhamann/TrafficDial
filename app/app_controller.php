@@ -3,6 +3,8 @@ class AppController extends Controller {
     var $components = array('Acl', 'Auth', 'Session');
     var $helpers = array('Javascript', 'Html', 'Form', 'Session');
 
+
+
     function beforeFilter() {
     
         if ($this->Session->read('Auth.User')) {
@@ -12,7 +14,6 @@ class AppController extends Controller {
         }
         if ($this->Session->check('Message.flash')) {
             $flash = $this->Session->read('Message.flash');
-
             if ($flash['element'] == 'default') {
                 $flash['element'] = 'flash_message';
                 $this->Session->write('Message.flash',$flash);

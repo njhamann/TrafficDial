@@ -66,7 +66,11 @@ class UsersController extends AppController {
             $this->redirect('/', null, false);
         }
     }       
- 
+    function json(){
+        $this->set('data', $this->User->find('all'));
+        $this->layout = 'ajax';        
+        $this->render('/json/index');
+    } 
     function logout() {
         $this->Session->setFlash('Good-Bye', 'flash_message');
         $this->redirect($this->Auth->logout());
