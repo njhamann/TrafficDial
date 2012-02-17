@@ -5,8 +5,7 @@
 			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('client_service_id');?></th>
 			<th><?php echo $this->Paginator->sort('service_number');?></th>
-			<th><?php echo $this->Paginator->sort('auth_token');?></th>
-			<th><?php echo $this->Paginator->sort('name');?></th>
+			<th><?php echo $this->Paginator->sort('email');?></th>
 			<th><?php echo $this->Paginator->sort('created');?></th>
 			<th><?php echo $this->Paginator->sort('modified');?></th>
 			<th class="actions"><?php __('Actions');?></th>
@@ -25,8 +24,7 @@
 			<?php echo $this->Html->link($facebookAuth['ClientService']['id'], array('controller' => 'client_services', 'action' => 'view', $facebookAuth['ClientService']['id'])); ?>
 		</td>
 		<td><?php echo $facebookAuth['FacebookAuth']['service_number']; ?>&nbsp;</td>
-		<td><?php echo $facebookAuth['FacebookAuth']['auth_token']; ?>&nbsp;</td>
-		<td><?php echo $facebookAuth['FacebookAuth']['name']; ?>&nbsp;</td>
+		<td><?php echo $facebookAuth['FacebookAuth']['email']; ?>&nbsp;</td>
 		<td><?php echo $facebookAuth['FacebookAuth']['created']; ?>&nbsp;</td>
 		<td><?php echo $facebookAuth['FacebookAuth']['modified']; ?>&nbsp;</td>
 		<td class="actions">

@@ -91,56 +91,13 @@ class TwitterAuthsController extends AppController {
                 $accessToken->key, 
                 $accessToken->secret, 
                 'http://api.twitter.com/1/account/verify_credentials.json');
-            $client_service = json_decode($json);
-            
-            $client_service->auth_key = $accessToken->key;
-            $client_service->auth_secret = $accessToken->secret;
-            $client_service->json = $json; 
-            $count = $this->TwitterAuth->find('count', 
-                array('conditions' => array('TwitterAuth.service_number' => $client_service->id)));
-            if($count > 0){
-                $this->Session->setFlash(__('Sorry this account already exist.', true));
-                $this->redirect(array('action' => 'close'));
-            }else{
-                $this->save_client_service($client_service);
-                $this->redirect(array('action' => 'close'));
-            }             
+           $client_service =  json_decode($json);
+           print_r($client_service); 
             //$data = $consumer->post($accessToken->key, $accessToken->secret, 'https://api.twitter.com/1/statuses/update.json', array('status' => 'hello world!'));
             //echo '<script>window.close();</script>';
         }
     }
 
-    function save_client_service($client_service) {
-        $user = $this->Session->read('Auth');
-        $client_service_data = array(
-            'user_id' => $user['User']['id'],
-            'type' => 'twitter',
-            'created' => date('Y-m-d H:i:s'),
-            'modified' => date('Y-m-d H:i:s')
-        );
-        $this->TwitterAuth->ClientService->save($client_service_data);
-        $client_service_id = $this->TwitterAuth->ClientService->id;
-        $twitterData = array(
-            'TwitterAuth' => array(
-                'client_service_id' => $client_service_id,
-                'service_number' => $client_service->id,
-                'auth_key' => $client_service->auth_key,
-                'auth_secret' => $client_service->auth_secret,
-                'name' => $client_service->name,
-                'link' => 'http://twitter.com/'.$client_service->screen_name,
-                'username' => $client_service->screen_name,
-                'user_json' => $client_service->json,
-                'created' => date('Y-m-d H:i:s'),
-                'modified' => date('Y-m-d H:i:s')
-        ));
-
-        if(!$this->TwitterAuth->save($twitterData)){ 
-            $this->Session->setFlash(__('The facebook auth could not be saved. Please, try again.', true));
-        }
-    }
-    function close() {
-        echo '<script>window.close();</script>';
-    }
     private function createConsumer() {
         return new OAuth_Consumer('km2eVUECrR0UKvL1e7dUQ', 'ixMYFR28SUGJzgWUjTAzkOQcoRIWVueeGLaUh6IfQ4');
     }

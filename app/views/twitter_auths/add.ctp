@@ -7,8 +7,12 @@
 	<?php
 		echo $this->Form->input('client_service_id');
 		echo $this->Form->input('service_number');
-		echo $this->Form->input('auth_token');
+		echo $this->Form->input('auth_key');
+		echo $this->Form->input('auth_secret');
 		echo $this->Form->input('name');
+		echo $this->Form->input('link');
+		echo $this->Form->input('username');
+		echo $this->Form->input('user_json');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>

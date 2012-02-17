@@ -81,17 +81,53 @@ class FacebookAuthsController extends AppController {
             $params = null;
             parse_str($response, $params);
             $graph_url = "https://graph.facebook.com/me?access_token=".$params['access_token'];
-            $user = json_decode(file_get_contents($graph_url));
-            print_r($user);
-            //echo '<script>window.close();</script>';
- 
+            $json = file_get_contents($graph_url);
+            $client_service = json_decode($json);
+            $client_service->json = $json;
+            $client_service->auth_token = $params['access_token'];
+            $count = $this->FacebookAuth->find('count', array('conditions' => array('FacebookAuth.service_number' => $client_service->id)));
+            if($count > 0){
+                $this->Session->setFlash(__('Sorry this account already exist.', true));
+                $this->redirect(array('action' => 'close'));
+            }else{
+                $this->save_client_service($client_service);         
+                $this->redirect(array('action' => 'close'));
+            }             
+        }
+    }
+    function save_client_service($client_service) {
+        $user = $this->Session->read('Auth');
+        $client_service_data = array(
+            'user_id' => $user['User']['id'],
+            'type' => 'facebook',
+            'created' => date('Y-m-d H:i:s'),
+            'modified' => date('Y-m-d H:i:s')
+        );
+        $this->FacebookAuth->ClientService->save($client_service_data);
+        $client_service_id = $this->FacebookAuth->ClientService->id;
+        $facebook_data = array(
+            'FacebookAuth' => array(
+                'client_service_id' => $client_service_id,
+                'service_number' => $client_service->id,
+                'auth_token' => $client_service->auth_token,
+                'first_name' => $client_service->first_name,
+                'last_name' => $client_service->last_name,
+                'link' => $client_service->link,
+                'username' => $client_service->username,
+                'email' => $client_service->email,
+                'user_json' => $client_service->json,
+                'created' => date('Y-m-d H:i:s'),
+                'modified' => date('Y-m-d H:i:s')
+        ));
+        if(!$this->FacebookAuth->save($facebook_data)){ 
+            $this->Session->setFlash(__('The facebook auth could not be saved. Please, try again.', true));
         }
     }
     function auth_complete() {
         //need to remove
     }
     function close() {
-        //need to remove
+        echo '<script>window.close();</script>';
     }
     function beforeFilter() {
         parent::beforeFilter(); 

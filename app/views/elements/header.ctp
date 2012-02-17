@@ -7,9 +7,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="/">TrafficDial</a>
           <div class="nav-collapse">
             <ul class="nav">
+              <li><a href="/applications">Application</a></li>
               <li><a href="/users">Users</a></li>
               <li><a href="/groups">Groups</a></li>
               <li><a href="/client_services">Client Services</a></li>
