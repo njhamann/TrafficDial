@@ -3,7 +3,6 @@ class GroupsController extends AppController {
 
 	var $name = 'Groups';
 
-    var $helpers = array('Html','Form','Javascript');
 	function index() {
 		$this->Group->recursive = 0;
 		$this->set('groups', $this->paginate());

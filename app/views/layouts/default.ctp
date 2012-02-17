@@ -35,7 +35,6 @@
     <?php echo $this->element('header'); ?>
 
     <div class="container">
-
             <?php echo $this->Session->flash('auth'); ?>
 			<?php echo $this->Session->flash(); ?>
 
@@ -45,8 +44,8 @@
     <?php
             //echo $javascript->link('/js/libs/modernizr-2.0.6.min');
             echo $javascript->link('/js/libs/jquery-1.7.1.min');    
-            echo $javascript->link('/js/libs/bootstrap/bootstrap.min.js');  
-            echo $javascript->link('/js/core.js');  
+            echo $javascript->link('/js/libs/bootstrap/bootstrap');  
+            echo $javascript->link('/js/core');  
     ?>
 	<?php
 		echo $scripts_for_layout;

@@ -1,9 +1,23 @@
 <?php
 class AppController extends Controller {
     var $components = array('Acl', 'Auth', 'Session');
-    var $helpers = array('Html', 'Form', 'Session');
+    var $helpers = array('Javascript', 'Html', 'Form', 'Session');
 
     function beforeFilter() {
+    
+        if ($this->Session->read('Auth.User')) {
+            $this->set('is_authed', true);
+        }else{
+            $this->set('is_authed', false);
+        }
+        if ($this->Session->check('Message.flash')) {
+            $flash = $this->Session->read('Message.flash');
+
+            if ($flash['element'] == 'default') {
+                $flash['element'] = 'flash_message';
+                $this->Session->write('Message.flash',$flash);
+            }
+        }
         $this->Auth->allowedActions = array('display');
         $this->Auth->actionPath = 'controllers/';
         $this->Auth->authorize = 'actions';

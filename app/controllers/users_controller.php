@@ -2,7 +2,6 @@
 class UsersController extends AppController {
 
 	var $name = 'Users';
-    var $helpers = array('Html','Form','Javascript');
 	function index() {
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
@@ -69,7 +68,7 @@ class UsersController extends AppController {
     }       
  
     function logout() {
-        $this->Session->setFlash('Good-Bye');
+        $this->Session->setFlash('Good-Bye', 'flash_message');
         $this->redirect($this->Auth->logout());
 
     }

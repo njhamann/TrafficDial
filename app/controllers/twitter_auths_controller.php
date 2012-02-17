@@ -4,7 +4,6 @@ App::import('Vendor', 'oauth', array('file' => 'OAuth' . DS . 'oauth_consumer.ph
 class TwitterAuthsController extends AppController {
 
 	var $name = 'TwitterAuths';
-    var $helpers = array('Html','Form','Javascript');
 
 	function index() {
 		$this->TwitterAuth->recursive = 0;

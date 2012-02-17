@@ -3,7 +3,6 @@ class ApplicationsController extends AppController {
 
 	var $name = 'Applications';
 
-    var $helpers = array('Html','Form','Javascript');
 	function index() {
 		$this->Application->recursive = 0;
 		$this->set('applications', $this->paginate());

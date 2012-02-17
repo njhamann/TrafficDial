@@ -2,7 +2,6 @@
 class ClientServicesController extends AppController {
 
 	var $name = 'ClientServices';
-    var $helpers = array('Html','Form','Javascript');
 	function index() {
 		$this->ClientService->recursive = 0;
 		$this->set('clientServices', $this->paginate());

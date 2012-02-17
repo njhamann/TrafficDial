@@ -3,7 +3,6 @@ class FacebookAuthsController extends AppController {
 
 	var $name = 'FacebookAuths';
 
-    var $helpers = array('Html','Form','Javascript');
 	function index() {
 		$this->FacebookAuth->recursive = 0;
 		$this->set('facebookAuths', $this->paginate());
